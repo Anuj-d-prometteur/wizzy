@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.5 on win32)" generated="2025-04-03T17:22:08.467122" rpa="false" schemaversion="5">
+<suite id="s1" name="FAQ" source="C:\Users\anujd\PycharmProjects\Wizzy\TestScrips_runner\Admin_Runner\FAQ.robot">
+<test id="s1-t1" name="Verify Login" line="17">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-03T17:22:08.638021" level="INFO">"hello"</msg>
+<arg>"hello"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-03T17:22:08.637022" elapsed="0.004000"/>
+</kw>
+<kw name="FAQ">
+<msg time="2025-04-03T17:22:08.644019" level="FAIL">No keyword with name 'FAQ' found.</msg>
+<var>${faq}</var>
+<status status="FAIL" start="2025-04-03T17:22:08.644019" elapsed="0.000999">No keyword with name 'FAQ' found.</status>
+</kw>
+<kw name="${faq}.create_FAQ">
+<arg>${data}</arg>
+<status status="NOT RUN" start="2025-04-03T17:22:08.646017" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-04-03T17:22:08.635024" elapsed="0.011993">No keyword with name 'FAQ' found.</status>
+</test>
+<status status="FAIL" start="2025-04-03T17:22:08.520090" elapsed="0.127927"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="FAQ">FAQ</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
