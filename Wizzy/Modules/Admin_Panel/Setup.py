@@ -10,8 +10,8 @@ import traceback
 
 def login_useraccount():
     try:
-        service = Service(EdgeChromiumDriverManager().install())
-        driver = webdriver.Edge(service=service)
+        service = Service(r"C:\Users\Anuj d\Downloads\chromedriver-win64\chromedriver-win64\chromedriver.exe")
+        driver = webdriver.Chrome(service=service)
         driver.get("https://wizzy-admin.vercel.app/auth-pages/login")
         driver.maximize_window()
         print("inter in code")
@@ -52,14 +52,15 @@ def logout_userAccount(driver):
 
 def login_adminAccount():
     try:
-        service = Service(EdgeChromiumDriverManager().install())
-        driver = webdriver.Edge(service=service)
+        #service = Service(EdgeChromiumDriverManager().install())
+        service = Service(r"C:\Users\Anuj d\Downloads\chromedriver-win64\chromedriver-win64\chromedriver.exe")
+        driver = webdriver.Chrome(service=service)
         driver.get("https://wizzy-admin.vercel.app/auth-pages/login")
         driver.maximize_window()
         print("Script executed successfully")
         driver.find_element(By.XPATH,"//input[@id='loginUsername']").send_keys("wizzyadmin@yopmail.com")
         driver.find_element(By.XPATH,"//input[@id='loginPassword']").send_keys("Pass@123")
-        sleep(3)
+        sleep(5)
         driver.execute_script("window.scrollBy(0, 900);")
         driver.find_element(By.XPATH,"//button[contains(text(),'Log in')]").click()
         print("wait for a min")

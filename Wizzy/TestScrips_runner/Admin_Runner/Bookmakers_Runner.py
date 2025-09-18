@@ -1,11 +1,8 @@
 #from robot.libraries.DateTime import get_current_date
 from datetime import timezone
-from time import sleep
-import pytest
 
-from Modules.Admin_Panel import Bookmakers
-from Modules.Admin_Panel import Setup
-
+from Wizzy.Modules.Admin_Panel import Bookmakers
+from Wizzy.Modules.Admin_Panel import Setup
 
 #validation meassage
 #//div[contains(text(),'Bookmaker deleted successfully')]
@@ -22,15 +19,15 @@ Title_name="wizzy_automation"+str(name)
 
 Url_name="http://"+str(Title_name)+"/test.com"
 
-data = ["Bookmakers","True", "wizzy", "http://wizzy12.com",Successfully_message]
+data = ["Bookmakers","True", "project", "http://wizzy12.com",Successfully_message]
 
-data1 = ["Exchange Bookmakers","True","wizzy", "http://wizzy.com",Successfully_message]
+data1 = ["Exchange Bookmakers","True","project", "http://wizzy.com",Successfully_message]
 
-data2 = ["Exchange Bookmakers","True", "wizzy", "http://wizzy.com",Successfully_message]
+data2 = ["Exchange Bookmakers","True", "project", "http://wizzy.com",Successfully_message]
 
-data3 = ["Exchange Bookmakers","True", "wizzy", "http://wizzy.com",Successfully_message]
+data3 = ["Exchange Bookmakers","True", "project", "http://wizzy.com",Successfully_message]
 
-data4 = ["Exchange Bookmakers","True", "wizzy", "http://wizzy.com",Successfully_message]
+data4 = ["Exchange Bookmakers","True", "project", "http://wizzy.com",Successfully_message]
 
 #<<<<<<<<<<   Test Cases    >>>>>>>>>
 def __init__():
@@ -63,7 +60,6 @@ def test_create_bookmakers_Titlemandatory_filed(driver):
     data = ["True","",Url_name,url_msg,Title_msg,"Bookmakers"]
     Bookmakers.create_bookmakers(data,driver)
     print("Closed:- verify_create_bookmakers_Titlemandatory_filed")
-
 
 def test_create_bookmakers_URLmandatory_filed(driver):
     print("Start: verify_create_bookmakers_URLmandatory_filed")

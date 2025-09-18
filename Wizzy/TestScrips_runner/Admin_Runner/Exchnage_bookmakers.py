@@ -11,14 +11,7 @@ from selenium.webdriver.edge.service import Service
 
 
 
-
-
-
-
-
-
-
-def create_Exchange_bookmakers(data,driver):
+def test_create_Exchange_bookmakers(data,driver):
      try:
          print("inter the method")
          driver.find_element(By.XPATH,"//div[@class='aside-body']//a[@href='/bookmakers-Management']").click()
